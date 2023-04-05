@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+    nodejs-net:
+        driver: bridge
+
+services:
+    nodejs:
+        container_name: nodejs
+        image: local/nodejs:${NODEJS_VERSION}
+        build:
+            context: ./nodejs
+            args:
+                TZ: ${TZ}
+                NODEJS_VERSION: ${NODEJS_VERSION}
+        volumes:
+            -   ./../app:/app:rw,cached
+        env_file:
+            -   .env
+        networks:
+            -   nodejs-net
