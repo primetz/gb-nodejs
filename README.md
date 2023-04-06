@@ -1,1 +1,28 @@
-# Курс [GeekBrains](https://go.redav.online/50829a86237ba651?erid=LdtCKEePH) по Node.js
+# :open_book: Курс [GeekBrains](https://go.redav.online/50829a86237ba651?erid=LdtCKEePH) по Node.js
+
+# :hammer_and_wrench: Установка
+
+## :grey_exclamation: Приложение работает в среде Docker, поэтому у вас должен быть установлен [docker](https://docs.docker.com/engine/install/), [docker-compose-plugin](https://docs.docker.com/engine/install/) и желательно [make](https://ru.wikipedia.org/wiki/Make).
+### Скачать и запустить приложение можно выполнив следующую команду:
+```shell
+git clone https://github.com/primetz/gb-nodejs.git && \
+cd gb-nodejs && \
+make dev-up
+```
+
+# :pencil: Практические задания
+
+## :pencil2: 1. Напишите программу для вывода в консоль простых чисел, чтобы они попадали в указанный диапазон включительно. При этом числа должны окрашиваться в цвета по принципу светофора:
+
+- первое число выводится зелёным цветом;
+- второе - жёлтым;
+- третье - красным.
+
+## Диапазон, куда попадут числа, указывается при запуске программы.
+1. Если простых чисел в диапазоне нет, нужно, чтобы программа сообщила об этом в терминале красным цветом.
+2. Если аргумент, переданный при запуске, не считается числом - сообщите об этом ошибкой и завершите программу.
+
+### :checkered_flag: Проверка рещения выполняется из контейнера nodejs:
+```shell
+npm run lesson_1 -- 1 100
+```

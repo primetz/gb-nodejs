@@ -1,3 +1,3 @@
 #!/bin/bash
 
-tail -f /dev/null
+npm install && tail -f /dev/null
